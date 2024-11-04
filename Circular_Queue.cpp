@@ -109,3 +109,4 @@ bool CQ::Circular_Queue<Item_type>::empty() {
 
 // Explicit instantiation
 template class CQ::Circular_Queue<int>;
+template class CQ::Circular_Queue<string>;

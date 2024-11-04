@@ -4,6 +4,7 @@
 
 #include "Recursive_Search_Last.h"
 #include <vector>
+#include <iostream>
 
 using namespace std;
 template<typename Item_type>
@@ -22,3 +23,5 @@ int linear_search(vector<Item_type>& items, const Item_type& target, size_t pos_
 
 // Explicit instantiation
 template int linear_search<int>(vector<int>& items, const int& target, size_t pos_last);
+template int linear_search<string>(vector<string>& items, const string& target, size_t pos_last);
+
