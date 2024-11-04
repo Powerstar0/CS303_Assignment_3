@@ -1,4 +1,5 @@
 # CS303_Assignment_3
+Johnny Diep
 
 ## How To Run
 ### Part 1 (Q1)
