@@ -80,13 +80,17 @@ int main() {
             cout << "Invalid Input" << endl;
     }
 
+    // Premade integer vector
     vector<int> numbers = {10, 5, 7, 3, 10, 5};
+    // Prints out current vector
     cout << "The current vector is: ";
     for (auto i : numbers)
         cout << i << " ";
     cout << endl;
+    // Returns last occurrence of target
     cout << "The last occurrence of 10 is at index : " << linear_search(numbers, 10, numbers.size() - 1) << endl;
     cout << endl;
+    // Menu
     while (user_input != "4") {
         cout << "Select an option: \n"
                 "1. Push Back \n"
@@ -95,17 +99,20 @@ int main() {
                 "4. Move to queue insertion sort \n" << endl;
         cin >> user_input;
         cout << endl;
+        // Push to vector
         if (user_input == "1") {
             string vector_input;
-            cout << "What number would you like to push to the queue?: " << endl;
+            cout << "What would you like to push to the queue?: " << endl;
             cin >> vector_input;
             numbers.push_back(stoi(vector_input));
             cout << "Element added" << endl;
         }
+        // Pop back element in vector
         else if (user_input == "2") {
             numbers.pop_back();
-            cout << "Element removed";
+            cout << "Element removed" << endl;
         }
+        // Search for target
         else if (user_input == "3") {
             string target;
             cout << "What target would you like to search the last instance for?: ";
@@ -114,12 +121,15 @@ int main() {
             cout << "The last occurrence of " << target << " is at index : " << linear_search(numbers, stoi(target), numbers.size() - 1) << endl;
 
         }
+        // Exit condition
         else if (user_input == "4") {
             break;
         }
+        // Error handling
         else {
             cout << "Invalid input" << endl;
         }
+        // Prints out current vector
         cout << "The current vector is: ";
         for (auto i : numbers)
             cout << i << " ";
@@ -127,10 +137,11 @@ int main() {
     }
 
 
-
+    // Insertion sort of queue
     while (user_input != "n") {
         string user_input2 = "";
         cout << "Here is a randomly generated Queue: ";
+        // Randomly generates queue
         CQ::Circular_Queue<int> stuff;
         for (int i = 0; i < 10; i++) {
             stuff.push(rand() % 100);
@@ -138,20 +149,25 @@ int main() {
         stuff.display();
         cout << endl;
         cout << "Here's the queue after sorting: " << endl;
+        // sorts queue
         insertion_sort(stuff);
         stuff.display();
         cout << endl;
+        // Asks user if they would like to generate another queue to sort
         while (true) {
             cout << "Would you like to generate another randomly generated queue and sort that? (y/n)" << endl;
             cin >> user_input2;
+            // Sets user input to "y"
             if (user_input2 == "y") {
                 user_input = user_input2;
                 break;
             }
+            // Sets user input to "n"
             else if (user_input2 == "n") {
                 user_input = user_input2;
                 break;
             }
+            // Error Handling
             else
                 cout << "Invalid input" << endl;
         }
