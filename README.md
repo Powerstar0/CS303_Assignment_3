@@ -2,6 +2,21 @@
 Johnny Diep
 
 ## How To Run
+
+### NOTE:
+
+This program was created and compiled in CLion on Windows. If using mac you may have to run this command in the terminal:
+
+clang++ -arch arm64 -std=c++17 -stdlib=libc++ -o my_program Main.cpp Circular_Queue.cpp Insertion_Sort.cpp Recursive_Search_Last.cpp 
+
+To sucessfully compile it. Afterwards you can run
+
+./my_program
+
+To run the program in the terminal.
+
+You may run into issues using any other IDE.
+
 ### Part 1 (Q1)
 1. When ran, the program will automatically generate a queue and instatiate it with 10 integers as per the requirement in the Assignment. Additionally, the menu will pop up.
 
